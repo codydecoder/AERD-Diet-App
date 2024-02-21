@@ -4,11 +4,9 @@ const {Schema} = require('mongoose')
 const Recipe = new Schema(
     {
         recipeName: {type: String, required: true},
-        foodList: [],
+        foodList: [{type: Schema.Types.ObjectId, ref: 'food_id'}],
         cumulativeOSix: {type: Number, required: true},
         cumalativeOThree: {type: Number, required: true},
-        cumulativeCalories: {type: Number, required: true},
-        cumulativeProtein: {type: Number, required: true},
         instructions: {type: String, required: true}
     },
     {timestamps: true}

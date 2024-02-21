@@ -6,9 +6,9 @@ const User = new Schema(
         userName: {type: String, required: true},
         fullName: {type: String, required: true},
         password: {type: String, required: true},
-        symptomRating: [],
-        savedRecipes: [],
-        savedFoods: [],
+        //symptomRating: [],
+        savedRecipes: [{type: Schema.Types.ObjectId, ref: 'recipe_id'}],
+        savedFoods: [{type: Schema.Types.ObjectId, ref: 'food_id'}],
     },
     {timestamps: true}
 )
