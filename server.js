@@ -4,7 +4,9 @@ const bodyParser = require('body-parser')
 const db = require('./db') //db
 const cors = require('cors') //cors
 
-//const plantController = require('./controllers/plantController')
+const foodController = require('./controllers/foodController')
+const recipeController = require('./controllers/recipeController')
+const userController = require('./controllers/userController')
 
 const PORT = process.env.PORT || 3001;
 
@@ -22,7 +24,7 @@ app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
 
 
 app.get('/', (req, res) => res.send('This is our landing page!'))
-// app.get('/plants', plantController.getAllPlants)
+ app.get('/foods', foodController.getAllFoods)
 // app.get('/plants/:id', plantController.getPlantById)
 
 // app.post('/plants', plantController.createPlant)
