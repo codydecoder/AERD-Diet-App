@@ -1,0 +1,185 @@
+/*Global Styles*/
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    background-color: lightcyan;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 0 0 10px antiquewhite;
+}
+
+#AerdLogo {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Roboto Slab", serif;
+    padding-top: 10px;
+    background: url('https://www.shutterstock.com/image-photo/beautiful-beach-chairs-on-sandy-600nw-1917936734.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar {
+    text-align: center;
+    font-family: 'Ropa Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 33.33% 33.34%  33.33%;
+
+    padding: 3px;
+    
+}
+
+.navLink {
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    border: 3px solid #d75f2a;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+/*
+.navLink {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: darkblue;
+    background-color: lightgoldenrodyellow;
+    border: 3px solid #d75f2a;
+    padding: 0px;
+    text-decoration: none;
+    height: 40px;
+    aspect-ratio: 1;
+}*/
+
+/*AllFoods Styles*/
+.allFoodGrid {
+            
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 33.3% 33.4% 33.3%;
+    border: 2px solid darkblue;
+    background-color: steelblue;
+}
+
+.foodGridItem {
+    border: 3px solid lightsalmon;
+    border-radius: 7px;
+    display: block;
+    margin: 4px;    
+    aspect-ratio: 1;
+    padding: 5px;
+    outline: 2px solid #d75f2a;
+    background-color: lightgoldenrodyellow;
+}
+.foodName {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Lily Script One", system-ui;
+}
+.foodImage {
+
+}
+.foodQuantity {
+
+}
+.foodO6 {
+
+}
+.foodO3 {
+
+}
+.food6to3Ratio {
+
+}
+/*AllRecipes Styles*/
+#allRecipeList {
+            
+    margin: 0 auto;
+
+    display: block;
+    border: 2px solid darkblue;
+    background-color: steelblue;
+}
+
+.recipeListItem {
+    border: 3px solid lightsalmon;
+    border-radius: 7px;
+    display: block;
+    margin: 4px;    
+    aspect-ratio: 1;
+    padding: 5px;
+    outline: 2px solid #d75f2a;
+    background-color: lightgoldenrodyellow;
+}
+.foodName {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Lily Script One", system-ui;
+}
+.foodImage {
+
+}
+.foodQuantity {
+
+}
+.foodO6 {
+
+}
+.foodO3 {
+
+}
+.food6to3Ratio {
+
+}
+
+/**/
+.searchArea {
+    display: grid;
+    grid-template-columns: 66.7% 33.3%;
+    margin: 12px;
+} 
+
+.mainPassage {
+    text-align: justify;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+
+.studyLinks {
+    border: 3px solid black;
+    border-radius: 4px;
+    background-color: aquamarine;
+    color: darkblue;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px;
+    padding: 4px;
+}
+/*Diet Resources Styles*/
+#dietResourcesSection {
+    padding: 4px;
+}
+.dietLinks {
+    display: block;
+    margin: 3px auto;
+    border: 2px solid black;
+    padding: 3px;
+    background-color: aquamarine;
+}
+
+/*Mobile Styling*/
+@media (max-width: 390px) {
+    body {
+        max-width: 390px;
+        margin: 0 auto;
+    }
+}
