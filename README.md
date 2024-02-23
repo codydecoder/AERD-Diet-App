@@ -23,3 +23,4 @@ HTML, CSS, JavaScript, Mongoose, MongoDB, Express, Nodemon, Node, CORS, Morgan
 - Add significantly more food into database
 - Fix Recipes DOM manip
 - Add saved User and log-in functionality
+- Add User symptom scores and symptom tracking functionality
