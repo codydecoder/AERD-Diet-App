@@ -17,19 +17,20 @@ const main = async () => {
   const bellPepper = await Food.find({foodName: 'Bell Pepper'})
   const garlic = await Food.find({foodName: 'Garlic'})
 
-  
+  console.log(cannedTuna)
+
   const recipes = [
     {
       recipeName: 'Canned Tuna Fish Salad',
       foodList: [
-        cannedTuna.foodName,
-        celery.foodName,
-        onion.foodName,
-        mayo.foodName,
-        yogurt.foodName,
+        cannedTuna[0]._id,
+        celery[0]._id,
+        onion[0]._id,
+        mayo[0]._id,
+        yogurt[0]._id,
       ],
       cumulativeOSix: 120,
-      cumalativeOThree: 478,
+      cumulativeOThree: 478,
       instructions: `1(6oz) can of tuna, light, packed in water
       1 medium 6-inch stalk of celery chopped(1/4 cup)
       ½ small onion, chopped(1/4 cup)
@@ -44,14 +45,14 @@ const main = async () => {
     {
       recipeName: 'Black Beans & Rice',
       foodList: [
-        whiteRice.foodName,
-        grassFedButter.foodName,
-        blackBeans.foodName,
-        bellPepper.foodName,
-        garlic.foodName,
+        whiteRice[0]._id,
+        grassFedButter[0]._id,
+        blackBeans[0]._id,
+        bellPepper[0]._id,
+        garlic[0]._id,
       ],
       cumulativeOSix: 853,
-      cumalativeOThree: 520,
+      cumulativeOThree: 520,
       instructions: `1 cup uncooked white rice(medium or long-grain)
       1 TBSP Grass-Fed butter
       1 can(16 oz) black beans

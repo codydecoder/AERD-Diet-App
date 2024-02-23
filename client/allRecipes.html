@@ -8,16 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Roboto+Slab:wght@100..900&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    
-    <!-- Add axios js link -->
 
 </head>
 <body>
@@ -32,14 +25,14 @@
     <main>
         
         <div class="searchArea">
-            <input id="allAerdInput" type="text" placeholder="enter food or recipe here">
-            <button id="submitAllAerd">search</button>
+            <input class="allAerdInput" type="text" placeholder="enter food or recipe here">
+            <button class="allAerdSubmit">search</button>
         </div>
         
-        <div id="allRecipeList">
+        <div class="allRecipeList">
             <div class="recipeListItem">
                 <div class="recipeName">Canned Tuna Fish Salad</div>
-                <div class="recipeImage">url</div>
+                <!-- <div class="recipeImage">url</div> -->
                 <div class="recipeIngredients">Canned Tuna, Celery, Onion, Mayo, Yogurt</div>
                 <div class="recipeO6">120</div>
                 <div class="recipeO3">478</div>
@@ -57,6 +50,46 @@
         </div>
 
     </main>
+    <script>
+        window.addEventListener('load', async () => {
+    let response = await axios.get(`http://localhost:3001/allRecipes`)
+    console.log(response.data)
+    
+    for(let b = 0; b < response.data.length; b++) {
+        const newRecipe = document.createElement('div')
+            newRecipe.classList.add('recipeListItem')
 
+            const nRecipeName = document.createElement('div')
+                nRecipeName.classList.add('recipeName')
+                nRecipeName.innerHTML = `${response.data[b].recipeName}`
+                newRecipe.appendChild(nRecipeName)
+                
+        
+            const nFoodList = document.createElement('div')
+                nFoodList.classList.add('recipeIngredients')
+                nFoodList.innerHTML = `${response.data[b].foodList}`
+                newRecipe.appendChild(nFoodList)
+        
+            const nRecipeO6 = document.createElement('div')
+                nRecipeO6.classList.add('recipeO6')
+                nRecipeO6.innerHTML = `O-6: ${response.data[b].cumulativeOSix} mg's`
+                newRecipe.appendChild(nRecipeO6)
+        
+            const nRecipeO3 = document.createElement('div')
+                nRecipeO3.classList.add('recipeO3')
+                nRecipeO3.innerHTML = `O-3: ${response.data[b].cumulativeOThree} mg's`
+                newRecipe.appendChild(nRecipeO3)
+        
+            const nRecipeInstructions = document.createElement('div')
+                nRecipeInstructions.classList.add('recipeInstructions')
+                nRecipeInstructions.innerHTML = `${response.data[b].recipeInstructions}`
+                newRecipe.appendChild(nRecipeInstructions)
+
+
+        recipeList.appendChild(newRecipe)
+    }
+})
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

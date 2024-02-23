@@ -6,30 +6,46 @@ body {
     background-color: lightcyan;
 }
 
+a {
+    color: darkblue;
+    -webkit-text-stroke: .5px;
+    -webkit-text-stroke-color: #d75f2a;
+}
+
 h1 {
     text-align: center;
     margin: 0 auto;
-    text-shadow: 0 0 10px antiquewhite;
+    text-shadow: 0 0 8px black;
 }
 
 #AerdLogo {
     display: flex;
     justify-content: space-around;
     font-family: "Roboto Slab", serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: steelblue;
     padding-top: 10px;
-    background: url('https://www.shutterstock.com/image-photo/beautiful-beach-chairs-on-sandy-600nw-1917936734.jpg');
+    background: url('https://www.bhg.com/thmb/Mwd_YEkDbVg_fPsUDcWr3eZk9W0=/5645x0/filters:no_upscale():strip_icc()/difference-between-fruits-vegetables-01-5f92e7ec706b463287bcfb46985698f9.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: wheat;
 }
 
 .navbar {
     text-align: center;
     font-family: 'Ropa Sans', sans-serif;
     display: grid;
-    grid-template-columns: 33.33% 33.34%  33.33%;
-
+    grid-template-columns: 30% 30%  30%;
+    justify-content: space-around;
+    border-top: 3px solid steelblue;
+    border-bottom: 3px solid steelblue;
+    background-color: steelblue;
     padding: 3px;
+    
     
 }
 
@@ -37,6 +53,9 @@ h1 {
     font-size: 20px;
     background-color: lightgoldenrodyellow;
     border: 3px solid #d75f2a;
+    border-radius: 4px;
+    outline: 2px solid lightsalmon;
+    
     padding: 8px;
     text-align: center;
     text-decoration: none;
@@ -65,7 +84,8 @@ h1 {
 
     display: grid;
     grid-template-columns: 33.3% 33.4% 33.3%;
-    border: 2px solid darkblue;
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
     background-color: steelblue;
 }
 
@@ -84,17 +104,21 @@ h1 {
     font-weight: 400;
     font-family: "Lily Script One", system-ui;
 }
-.foodImage {
 
-}
 .foodQuantity {
 
 }
 .foodO6 {
-
+    color: red;
+}
+#O6 {
+    color: black;
 }
 .foodO3 {
-
+    color: green;
+}
+#O3 {
+    color: black;
 }
 .food6to3Ratio {
 
@@ -113,47 +137,79 @@ h1 {
     border: 3px solid lightsalmon;
     border-radius: 7px;
     display: block;
-    margin: 4px;    
+    margin: 4px; 
+    margin-bottom: 8px;   
     aspect-ratio: 1;
     padding: 5px;
     outline: 2px solid #d75f2a;
     background-color: lightgoldenrodyellow;
 }
-.foodName {
+
+.recipeName {
+    font-family: "Lily Script One", system-ui;
     font-size: 18px;
     font-weight: 400;
-    font-family: "Lily Script One", system-ui;
 }
-.foodImage {
+.recipeIngredients {
 
 }
-.foodQuantity {
-
+.recipeO6 {
+    color: red;
 }
-.foodO6 {
-
+.recipeO3 {
+    color: green;
 }
-.foodO3 {
-
-}
-.food6to3Ratio {
+.recipeInstructions {
 
 }
 
-/**/
+
+
+
+/*Search Styling*/
 .searchArea {
     display: grid;
     grid-template-columns: 66.7% 33.3%;
-    margin: 12px;
+    margin: 4px;
 } 
+.allAerdInput {
+    border: 2px solid steelblue;
+    background-color: white;
+    margin-right: 1px;
+    padding: 3px;
+}
+.allAerdSubmit {
+    border: 2px solid steelblue;
+    background-color: skyblue;
+    margin-left: 1px;
+    padding: 3px;
+}
 
-.mainPassage {
+/*aboutAERD styles*/
+#aboutAerdSection { 
+    padding: 4px;
+}
+#aboutAerdBar {
+    margin-bottom: 0;
+    border-bottom: 2px solid #d75f2a;
+}
+#aboutAerdPassage {
     text-align: justify;
-    padding: 5px;
-    border: 2px solid black;
+    margin-top: 0;
+}
+#resourcesBar {
+    padding: 4px;
+    font-size: 24px;
+    font-weight: 450;
+}
+.resourceLinks {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
 }
 
 
+/*AERD Research Studies styles*/
 .studyLinks {
     border: 3px solid black;
     border-radius: 4px;
@@ -164,17 +220,34 @@ h1 {
     margin: 8px;
     padding: 4px;
 }
+#aerdStudies {
+    padding: 4px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+    border-bottom: 3px solid steelblue;
+}
+
 /*Diet Resources Styles*/
 #dietResourcesSection {
     padding: 4px;
 }
+#dietResourcesBar {
+    padding: 4px;
+    text-align: center;
+    margin: -4px;
+    margin-top: 5px;
+    margin-bottom: -2px;
+    border-bottom: 3px solid steelblue;
+}
 .dietLinks {
     display: block;
-    margin: 3px auto;
+    margin: 5px auto;
     border: 2px solid black;
     padding: 3px;
     background-color: aquamarine;
 }
+
 
 /*Mobile Styling*/
 @media (max-width: 390px) {

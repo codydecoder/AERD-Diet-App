@@ -93,7 +93,7 @@ const main = async () => {
       omegaRatio: 2.4
     },
     {
-      foodName: 'Milk(2%)',
+      foodName: 'Milk',
       quantity: '1 cup',
       omegaSixContent: 0.136,
       omegaThreeContent: 0.059,

@@ -9,9 +9,11 @@ const main = async () => {
   const cannedTunaFishSalad = await Recipe.find({recipeName: 'Canned Tuna Fish Salad'})
   const blackBeansAndRice = await Recipe.find({recipeName: 'Black Beans & Rice'})
   const coffee = await Food.find({foodName: 'Coffee'})
-  const milk = await Food.find({foodName: 'Milk(%2)'})
+  const milk = await Food.find({foodName: 'Milk'})
   const applesauce = await Food.find({foodName: 'Applesauce'})
   
+  
+
   const users = [
     {
       userName: `coderDecoder`,
@@ -19,12 +21,12 @@ const main = async () => {
       password: 'DietFood321',
       //symptomRating: [],
       savedRecipes: [
-        blackBeansAndRice.recipe_id
+        blackBeansAndRice[0]._id
       ],
       savedFoods: [
-        coffee.food_id,
-        milk.food_id,
-        applesauce.food_id
+        coffee[0]._id,
+        milk[0]._id,
+        applesauce[0]._id
       ],
     },
     {
@@ -33,10 +35,10 @@ const main = async () => {
       password: 'Password123',
       //symptomRating: [],
       savedRecipes: [
-        cannedTunaFishSalad.recipe_id,
+        cannedTunaFishSalad[0]._id,
       ],
       savedFoods: [
-        applesauce.food_id
+        applesauce[0]._id
       ],
     }
   ]

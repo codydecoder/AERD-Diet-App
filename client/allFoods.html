@@ -8,16 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Roboto+Slab:wght@100..900&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    
-    <!-- Add axios js link -->
 
 </head>
 <body>
@@ -32,36 +25,56 @@
     <main>
         
         <div class="searchArea">
-            <input id="allAerdInput" type="text" placeholder="enter food or recipe here">
-            <button id="submitAllAerd">search</button>
+            <input class="allAerdInput" id="allFoodInput" type="text" placeholder="enter food or recipe here">
+            <button class="allAerdSubmit" id="submitAllFood">search</button>
         </div>
         
         <div class="allFoodGrid">
-            <div class="foodGridItem">
-                <div class="foodName">Canned Tuna</div>
-                <div class="foodImage">url</div>
-                <div class="foodQuantity">1 cup</div>
-                <div class="foodO6">13.9</div>
-                <div class="foodO3">433</div>
-                <div class="food6to3Ratio">0.03</div>
-            </div>
-            <div class="foodGridItem">2</div>
-            <div class="foodGridItem">3</div>
-            <div class="foodGridItem">4</div>
-            <div class="foodGridItem">5</div>
-            <div class="foodGridItem">6</div>
-            <div class="foodGridItem">7</div>
-            <div class="foodGridItem">8</div>
-            <div class="foodGridItem">9</div>
-            <div class="foodGridItem">10</div>
-            <div class="foodGridItem">11</div>
-            <div class="foodGridItem">12</div>
-            <div class="foodGridItem">13</div>
-            <div class="foodGridItem">14</div>
-            <div class="foodGridItem">15</div>
+            
+        
         </div>
 
     </main>
+    <script>
+        window.addEventListener('load', async () => {
+    let response = await axios.get(`http://localhost:3001/allFoods`)
+    console.log(response.data)
+    
+    for(let a = 0; a < response.data.length; a++) {
+        const newFood = document.createElement('div')
+            newFood.classList.add('foodGridItem')
 
+            const nFoodName = document.createElement('div')
+                nFoodName.classList.add('foodName')
+                nFoodName.innerHTML = `${response.data[a].foodName}`
+                newFood.appendChild(nFoodName)
+                
+        
+            const nFoodQuantity = document.createElement('div')
+                nFoodQuantity.classList.add('foodQuantity')
+                nFoodQuantity.innerHTML = `${response.data[a].quantity}`
+                newFood.appendChild(nFoodQuantity)
+        
+            const nFoodO6 = document.createElement('div')
+                nFoodO6.classList.add('foodO6')
+                nFoodO6.innerHTML = `<span id="O6">O-6:</span> ${response.data[a].omegaSixContent} mg's`
+                newFood.appendChild(nFoodO6)
+        
+            const nFoodO3 = document.createElement('div')
+                nFoodO3.classList.add('foodO3')
+                nFoodO3.innerHTML = `<span id="O3">O-3:</span> ${response.data[a].omegaThreeContent} mg's`
+                newFood.appendChild(nFoodO3)
+        
+            const nFoodRatio = document.createElement('div')
+                nFoodRatio.classList.add('food6to3Ratio')
+                nFoodRatio.innerHTML = `6/3 Ratio: ${response.data[a].omegaRatio}`
+                newFood.appendChild(nFoodRatio)
+
+
+        foodGrid.appendChild(newFood)
+    }
+})
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
