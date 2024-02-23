@@ -19,6 +19,7 @@ HTML, CSS, JavaScript, Mongoose, MongoDB, Express, Nodemon, Node, CORS, Morgan
 ![aboutAERD](images/aboutAERD.pdf)
 
 # Next Steps
-- Add all food into database
+- Fix Search functionality
+- Add significantly more food into database
 - Fix Recipes DOM manip
-- Add saved user and log in functionality
+- Add saved User and log-in functionality
