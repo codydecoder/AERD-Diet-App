@@ -12,10 +12,11 @@ This app seeks to compile food and recipe information from numerous scattered so
 HTML, CSS, JavaScript, Mongoose, MongoDB, Express, Nodemon, Node, CORS, Morgan
 
 # ERD Diagram
-FreeForm Design
+![ERD](images/ERD.pdf)
 
 # WireFrame Designs
-FreeForm Designs
+![landingPage](images/AERDlanding.pdf)
+![aboutAERD](images/aboutAERD.pdf)
 
 # Next Steps
 - Add all food into database
